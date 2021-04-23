@@ -165,6 +165,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104231127028_iitial.cs" />
+    <Compile Include="Migrations\202104231127028_iitial.designer.cs">
+      <DependentUpon>202104231127028_iitial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104231358520_MenuUpdated.cs" />
+    <Compile Include="Migrations\202104231358520_MenuUpdated.designer.cs">
+      <DependentUpon>202104231358520_MenuUpdated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104231419229_update.cs" />
+    <Compile Include="Migrations\202104231419229_update.designer.cs">
+      <DependentUpon>202104231419229_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\Author.cs" />
@@ -198,6 +210,12 @@
     <Content Include="Fonts\open-iconic\open-iconic.woff" />
     <None Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Travel.cshtml" />
+    <Content Include="Views\Home\Fashion.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Single.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -207,6 +225,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202104231127028_iitial.resx">
+      <DependentUpon>202104231127028_iitial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104231358520_MenuUpdated.resx">
+      <DependentUpon>202104231358520_MenuUpdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104231419229_update.resx">
+      <DependentUpon>202104231419229_update.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

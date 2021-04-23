@@ -13,5 +13,25 @@ namespace BlogMVCApp.Controllers
         {
             return View();
         }
+        public ActionResult Travel()
+        {
+            return View();
+        }
+        public ActionResult Fashion()
+        {
+            return View();
+        }
+        public ActionResult About()
+        {
+            return View();
+        }
+        public ActionResult Contact()
+        {
+            return View();
+        }
+        public ActionResult Single()
+        {
+            return View();
+        }
     }
 }
