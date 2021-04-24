@@ -35,12 +35,14 @@
     <div id="colorlib-page">
         <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         <aside id="colorlib-aside" role="complementary" class="js-fullheight">
-        @*@{ 
+            @*@{
             Html.RenderPartial("_MenuPartial");
         }*@
-        @Html.ActionLink("AllMenus", "Menus");
+            @Html.Action("AllMenus", "Menus")
+
 
             @{Html.RenderPartial("_FooterPartial");}
+
         </aside> <!-- END COLORLIB-ASIDE -->
         @RenderBody()
     </div><!-- END COLORLIB-PAGE -->

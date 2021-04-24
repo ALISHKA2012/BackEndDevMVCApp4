@@ -182,10 +182,24 @@
     <Compile Include="Migrations\202104231449499_AddedMenu.designer.cs">
       <DependentUpon>202104231449499_AddedMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104232109311_bool.cs" />
+    <Compile Include="Migrations\202104232109311_bool.designer.cs">
+      <DependentUpon>202104232109311_bool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104240633578_Article_Updated.cs" />
+    <Compile Include="Migrations\202104240633578_Article_Updated.designer.cs">
+      <DependentUpon>202104240633578_Article_Updated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104240719599_ArticleIndex_CategoryModel_Added.cs" />
+    <Compile Include="Migrations\202104240719599_ArticleIndex_CategoryModel_Added.designer.cs">
+      <DependentUpon>202104240719599_ArticleIndex_CategoryModel_Added.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Article.cs" />
+    <Compile Include="Models\ArticleIndexModel.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\CategoryModel.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\Tag.cs" />
@@ -246,6 +260,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104231449499_AddedMenu.resx">
       <DependentUpon>202104231449499_AddedMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104232109311_bool.resx">
+      <DependentUpon>202104232109311_bool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104240633578_Article_Updated.resx">
+      <DependentUpon>202104240633578_Article_Updated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104240719599_ArticleIndex_CategoryModel_Added.resx">
+      <DependentUpon>202104240719599_ArticleIndex_CategoryModel_Added.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

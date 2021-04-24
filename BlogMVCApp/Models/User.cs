@@ -19,7 +19,7 @@ namespace BlogMVCApp.Models
         [Required]
         [EmailAddress]
         public string Email { get; set; }
-        public string IsAuthor { get; set; }
+        public bool IsAuthor { get; set; }
    
     }
 }

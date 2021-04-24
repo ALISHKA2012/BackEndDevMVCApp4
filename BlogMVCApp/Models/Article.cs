@@ -10,7 +10,7 @@ namespace BlogMVCApp.Models
     {
         public int Id { get; set; }
         [Required]
-        [StringLength(maximumLength: 40, MinimumLength = 2)]
+        [StringLength(maximumLength: 80, MinimumLength = 2)]
         public string Title { get; set; }
         public Author Author { get; set; }
         public int AuthorId { get; set; }
