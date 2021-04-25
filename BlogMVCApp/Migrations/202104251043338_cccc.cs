@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class ArticleIndex_CategoryModel_Added : DbMigration
+    public partial class cccc : DbMigration
     {
         public override void Up()
         {

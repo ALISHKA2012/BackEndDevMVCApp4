@@ -12,5 +12,11 @@ namespace BlogMVCApp.Models
         [Required]
         [StringLength(maximumLength: 50, MinimumLength = 2)]
         public string Name { get; set; }
+
+        public IEnumerable<Article> Articles { get; set; }
+        public Category()
+        {
+            Articles = new HashSet<Article>();
+        }
     }
 }

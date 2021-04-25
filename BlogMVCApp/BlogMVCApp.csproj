@@ -166,6 +166,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="infrastrucure\DbContextExtensions.cs" />
     <Compile Include="Migrations\202104231127028_iitial.cs" />
     <Compile Include="Migrations\202104231127028_iitial.designer.cs">
       <DependentUpon>202104231127028_iitial.cs</DependentUpon>
@@ -190,9 +191,9 @@
     <Compile Include="Migrations\202104240633578_Article_Updated.designer.cs">
       <DependentUpon>202104240633578_Article_Updated.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104240719599_ArticleIndex_CategoryModel_Added.cs" />
-    <Compile Include="Migrations\202104240719599_ArticleIndex_CategoryModel_Added.designer.cs">
-      <DependentUpon>202104240719599_ArticleIndex_CategoryModel_Added.cs</DependentUpon>
+    <Compile Include="Migrations\202104251043338_cccc.cs" />
+    <Compile Include="Migrations\202104251043338_cccc.designer.cs">
+      <DependentUpon>202104251043338_cccc.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Article.cs" />
@@ -238,6 +239,8 @@
     <Content Include="Views\Menus\AllMenus.cshtml" />
     <Content Include="Views\Shared\_NewsLetterPartial.cshtml" />
     <Content Include="Views\Shared\_FooterPartial.cshtml" />
+    <Content Include="Views\Shared\_SingleArticlePartial.cshtml" />
+    <Content Include="Views\Shared\Categories.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -267,8 +270,8 @@
     <EmbeddedResource Include="Migrations\202104240633578_Article_Updated.resx">
       <DependentUpon>202104240633578_Article_Updated.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104240719599_ArticleIndex_CategoryModel_Added.resx">
-      <DependentUpon>202104240719599_ArticleIndex_CategoryModel_Added.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104251043338_cccc.resx">
+      <DependentUpon>202104251043338_cccc.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

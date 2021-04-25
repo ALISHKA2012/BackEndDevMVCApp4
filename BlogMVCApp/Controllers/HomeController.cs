@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BlogMVCApp.infrastrucure;
+using BlogMVCApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,16 +10,19 @@ namespace BlogMVCApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly BlogMVCApp.Data.BlogDbContext _blogDbContext;
+        private Data.BlogDbContext _blogDbContext;
+        private int _itemsPerPage;
         public HomeController()
         {
             _blogDbContext = new Data.BlogDbContext();
+            _itemsPerPage = 4;
         }
 
         // GET: Home
-        public ActionResult Index()
+        public ActionResult Index(int page = 1)
         {
-            return View(_blogDbContext.Articles.ToList());
+        
+            return View(_blogDbContext.GetPaginatableArticleData(page, _itemsPerPage));
         }
         public ActionResult Travel()
         {
@@ -38,6 +43,10 @@ namespace BlogMVCApp.Controllers
         public ActionResult Single()
         {
             return View();
+        }
+        public ActionResult Categories()
+        {
+            return View(_blogDbContext.GetCategoriesData());
         }
     }
 }

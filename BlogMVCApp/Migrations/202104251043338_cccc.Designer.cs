@@ -7,13 +7,13 @@ namespace BlogMVCApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class ArticleIndex_CategoryModel_Added : IMigrationMetadata
+    public sealed partial class cccc : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ArticleIndex_CategoryModel_Added));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(cccc));
         
         string IMigrationMetadata.Id
         {
-            get { return "202104240719599_ArticleIndex_CategoryModel_Added"; }
+            get { return "202104251043338_cccc"; }
         }
         
         string IMigrationMetadata.Source
