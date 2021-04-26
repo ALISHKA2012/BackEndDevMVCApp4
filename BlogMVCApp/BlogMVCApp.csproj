@@ -195,9 +195,9 @@
     <Compile Include="Migrations\202104251046587_CategoryUpdatedArticlesAdded.designer.cs">
       <DependentUpon>202104251046587_CategoryUpdatedArticlesAdded.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104261620487_Updated.cs" />
-    <Compile Include="Migrations\202104261620487_Updated.designer.cs">
-      <DependentUpon>202104261620487_Updated.cs</DependentUpon>
+    <Compile Include="Migrations\202104261627485_Category.cs" />
+    <Compile Include="Migrations\202104261627485_Category.designer.cs">
+      <DependentUpon>202104261627485_Category.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Article.cs" />
@@ -277,8 +277,8 @@
     <EmbeddedResource Include="Migrations\202104251046587_CategoryUpdatedArticlesAdded.resx">
       <DependentUpon>202104251046587_CategoryUpdatedArticlesAdded.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104261620487_Updated.resx">
-      <DependentUpon>202104261620487_Updated.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104261627485_Category.resx">
+      <DependentUpon>202104261627485_Category.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -34,8 +34,7 @@ namespace BlogMVCApp.infrastrucure
             return _blogDbContext.Categories.Select(x => new CategoryModel
             {
                 Id = x.Id,
-                Name = x.Name,
-           
+                Name = x.Name
             }).ToList();
         }
              

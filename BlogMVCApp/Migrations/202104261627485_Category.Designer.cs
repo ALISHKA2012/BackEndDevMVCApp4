@@ -7,13 +7,13 @@ namespace BlogMVCApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class Updated : IMigrationMetadata
+    public sealed partial class Category : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Updated));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Category));
         
         string IMigrationMetadata.Id
         {
-            get { return "202104261620487_Updated"; }
+            get { return "202104261627485_Category"; }
         }
         
         string IMigrationMetadata.Source
