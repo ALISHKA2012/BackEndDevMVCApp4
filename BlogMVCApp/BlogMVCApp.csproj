@@ -167,48 +167,21 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="infrastrucure\DbContextExtensions.cs" />
-    <Compile Include="Migrations\202104231127028_iitial.cs" />
-    <Compile Include="Migrations\202104231127028_iitial.designer.cs">
-      <DependentUpon>202104231127028_iitial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104231358520_MenuUpdated.cs" />
-    <Compile Include="Migrations\202104231358520_MenuUpdated.designer.cs">
-      <DependentUpon>202104231358520_MenuUpdated.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104231419229_update.cs" />
-    <Compile Include="Migrations\202104231419229_update.designer.cs">
-      <DependentUpon>202104231419229_update.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104231449499_AddedMenu.cs" />
-    <Compile Include="Migrations\202104231449499_AddedMenu.designer.cs">
-      <DependentUpon>202104231449499_AddedMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104232109311_bool.cs" />
-    <Compile Include="Migrations\202104232109311_bool.designer.cs">
-      <DependentUpon>202104232109311_bool.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104240633578_Article_Updated.cs" />
-    <Compile Include="Migrations\202104240633578_Article_Updated.designer.cs">
-      <DependentUpon>202104240633578_Article_Updated.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104251046587_CategoryUpdatedArticlesAdded.cs" />
-    <Compile Include="Migrations\202104251046587_CategoryUpdatedArticlesAdded.designer.cs">
-      <DependentUpon>202104251046587_CategoryUpdatedArticlesAdded.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104261627485_Category.cs" />
-    <Compile Include="Migrations\202104261627485_Category.designer.cs">
-      <DependentUpon>202104261627485_Category.cs</DependentUpon>
+    <Compile Include="Migrations\202104261648333_initial.cs" />
+    <Compile Include="Migrations\202104261648333_initial.designer.cs">
+      <DependentUpon>202104261648333_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Article.cs" />
+    <Compile Include="Data\Article.cs" />
     <Compile Include="Models\ArticleIndexModel.cs" />
-    <Compile Include="Models\Author.cs" />
-    <Compile Include="Models\Category.cs" />
+    <Compile Include="Data\Author.cs" />
+    <Compile Include="Data\Category.cs" />
     <Compile Include="Models\CategoryModel.cs" />
-    <Compile Include="Models\Comment.cs" />
-    <Compile Include="Models\Menu.cs" />
-    <Compile Include="Models\Tag.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="Data\Comment.cs" />
+    <Compile Include="Data\Menu.cs" />
+    <Compile Include="Data\Tag.cs" />
+    <Compile Include="Models\TagModel.cs" />
+    <Compile Include="Data\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -236,15 +209,13 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Travel.cshtml" />
-    <Content Include="Views\Home\Fashion.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Single.cshtml" />
     <Content Include="Views\Menus\AllMenus.cshtml" />
     <Content Include="Views\Shared\_NewsLetterPartial.cshtml" />
     <Content Include="Views\Shared\_FooterPartial.cshtml" />
     <Content Include="Views\Shared\_SingleArticlePartial.cshtml" />
     <Content Include="Views\Home\Categories.cshtml" />
+    <Content Include="Views\Home\Tags.cshtml" />
+    <Content Include="Views\Shared\_PopularArticlePartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -256,29 +227,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202104231127028_iitial.resx">
-      <DependentUpon>202104231127028_iitial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104231358520_MenuUpdated.resx">
-      <DependentUpon>202104231358520_MenuUpdated.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104231419229_update.resx">
-      <DependentUpon>202104231419229_update.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104231449499_AddedMenu.resx">
-      <DependentUpon>202104231449499_AddedMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104232109311_bool.resx">
-      <DependentUpon>202104232109311_bool.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104240633578_Article_Updated.resx">
-      <DependentUpon>202104240633578_Article_Updated.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104251046587_CategoryUpdatedArticlesAdded.resx">
-      <DependentUpon>202104251046587_CategoryUpdatedArticlesAdded.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104261627485_Category.resx">
-      <DependentUpon>202104261627485_Category.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104261648333_initial.resx">
+      <DependentUpon>202104261648333_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

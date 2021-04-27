@@ -25,8 +25,10 @@ namespace BlogMVCApp.infrastrucure
                 ShortDescription = x.ShortDescription,
                 PublishDate = x.PublishDate,
                 Title = x.Title,
-                    //ViewCount = x.ViewCount
-                }).ToList();
+                CommentsCount = x.Comments.Count,
+                AuthorName = x.Author.User.UserName
+                //ViewCount = x.ViewCount
+            }).ToList();
         }
 
         public static IEnumerable<CategoryModel> GetCategoriesData(this BlogDbContext _blogDbContext)
@@ -34,10 +36,20 @@ namespace BlogMVCApp.infrastrucure
             return _blogDbContext.Categories.Select(x => new CategoryModel
             {
                 Id = x.Id,
-                Name = x.Name
+                Name = x.Name,
+                ArticleCount = x.Articles.Count
             }).ToList();
         }
-             
-        
+        public static IEnumerable<TagModel> GetTagsData(this BlogDbContext _blogDbContext)
+        {
+            return _blogDbContext.Tags.Select(x => new TagModel
+            {
+                Id = x.Id,
+                Name = x.Name
+            }).ToList();
+          
+        }
+
+
     }
 }

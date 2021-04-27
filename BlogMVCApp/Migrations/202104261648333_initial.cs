@@ -3,10 +3,8 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Category : DbMigration
+    public partial class initial : DbMigration
     {
-
-
         public override void Up()
         {
             DropForeignKey("dbo.Categories", "Article_Id", "dbo.Articles");

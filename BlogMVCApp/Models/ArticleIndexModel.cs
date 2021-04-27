@@ -19,7 +19,11 @@ namespace BlogMVCApp.Models
         [Required]
         public string ShortDescription { get; set; }
         public uint ViewCount { get; set; }
+        public string AuthorName { get; set; }
+
         public IEnumerable<CategoryModel> Categories { get; set; }
+        public int CommentsCount { get; set; }
+
 
     }
 }

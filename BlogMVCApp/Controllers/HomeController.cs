@@ -28,21 +28,9 @@ namespace BlogMVCApp.Controllers
         {
             return View();
         }
-        public ActionResult Fashion()
+        public ActionResult Tags()
         {
-            return View();
-        }
-        public ActionResult About()
-        {
-            return View();
-        }
-        public ActionResult Contact()
-        {
-            return View();
-        }
-        public ActionResult Single()
-        {
-            return View();
+            return View(_blogDbContext.GetTagsData());
         }
         public ActionResult Categories()
         {
