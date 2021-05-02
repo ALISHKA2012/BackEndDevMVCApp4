@@ -32,6 +32,10 @@ namespace BlogMVCApp.Controllers
         {
             return View(_blogDbContext.GetTagsData());
         }
+        public ActionResult PopularArticle()
+        {
+            return View(_blogDbContext.GetArticlePopularModels());
+        }
         public ActionResult Categories()
         {
             return View(_blogDbContext.GetCategoriesData());
