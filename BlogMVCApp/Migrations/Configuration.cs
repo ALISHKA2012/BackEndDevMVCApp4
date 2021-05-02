@@ -117,6 +117,48 @@
                 ViewCount = 1,
                 WrittenDate = DateTime.Now,
 
+            },
+            new Article
+            {
+                Id = 4,
+                AuthorId = 1,
+                ShortDescription = "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+                Description = "A small river named Duden flows by their place and supplies it with the necessary regelialia.A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+                ImagePath = "image_4.jpg",
+                MenuId = 1,
+                PublishDate = DateTime.Now,
+                Title = "A Loving Heart is the Truest Wisdom",
+                ViewCount = 1,
+                WrittenDate = DateTime.Now,
+
+            },
+            new Article
+            {
+                Id = 5,
+                AuthorId = 1,
+                ShortDescription = "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+                Description = "A small river named Duden flows by their place and supplies it with the necessary regelialia.A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+                ImagePath = "image_5.jpg",
+                MenuId = 1,
+                PublishDate = DateTime.Now,
+                Title = "Great Things Never Came from Comfort Zone",
+                ViewCount = 1,
+                WrittenDate = DateTime.Now,
+
+            },
+            new Article
+            {
+                Id = 6,
+                AuthorId = 1,
+                ShortDescription = "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+                Description = "A small river named Duden flows by their place and supplies it with the necessary regelialia.A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+                ImagePath = "image_6.jpg",
+                MenuId = 1,
+                PublishDate = DateTime.Now,
+                Title = "Paths Are Made by Walking",
+                ViewCount = 1,
+                WrittenDate = DateTime.Now,
+
             }
             );
             context.Categories.AddOrUpdate(new Category

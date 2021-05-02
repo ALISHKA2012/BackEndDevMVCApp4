@@ -26,8 +26,8 @@ namespace BlogMVCApp.infrastrucure
                 PublishDate = x.PublishDate,
                 Title = x.Title,
                 CommentsCount = x.Comments.Count,
-                AuthorName = x.Author.User.UserName
-                //ViewCount = x.ViewCount
+                AuthorName = x.Author.User.UserName,
+                ViewCount = x.ViewCount
             }).ToList();
         }
 
@@ -48,6 +48,19 @@ namespace BlogMVCApp.infrastrucure
                 Name = x.Name
             }).ToList();
           
+        }
+        public static IEnumerable<ArticlePopularModel> GetArticlePopularModels(this BlogDbContext _blogDbContext)
+        {
+                    return _blogDbContext.Articles.OrderByDescending(art => art.ViewCount).Take(3)
+           .Select(x => new ArticlePopularModel
+           {
+               Id = x.Id,
+               ImagePath = x.ImagePath,
+               PublishDate = x.PublishDate,
+               Title = x.Title,
+               CommentsCount = x.Comments.Count,
+               AuthorName = x.Author.User.UserName,
+           }).ToList();
         }
 
 

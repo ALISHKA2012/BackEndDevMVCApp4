@@ -22,7 +22,7 @@ namespace BlogMVCApp.Models
         public string Description { get; set; }
         [Required]
         public string ShortDescription { get; set; }
-        public uint ViewCount { get; set; }
+        public int ViewCount { get; set; }
         public ICollection<Comment> Comments { get; set; }
         public ICollection<Tag> Tags { get; set; }
         public ICollection<Category> Categories { get; set; }
