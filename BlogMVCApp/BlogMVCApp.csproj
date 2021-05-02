@@ -217,6 +217,10 @@
     <Content Include="Views\Home\Categories.cshtml" />
     <Content Include="Views\Home\Tags.cshtml" />
     <Content Include="Views\Shared\PopularArticle.cshtml" />
+    <Content Include="Views\Shared\_ArchivesPartial.cshtml" />
+    <Content Include="Views\Shared\_SideBarNewsLetter.cshtml" />
+    <Content Include="Views\Shared\_SideBarParagraphBottom.cshtml" />
+    <Content Include="Views\Shared\_SideBarSearchTop.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
