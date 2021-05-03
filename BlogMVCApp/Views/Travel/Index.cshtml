@@ -1,6 +1,7 @@
-﻿@model List<BlogMVCApp.Models.ArticleIndexModel>
+﻿@model IEnumerable<BlogMVCApp.Models.ArticleIndexModel>
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
+    articles = Model;
 }
 
 
@@ -9,9 +10,9 @@
     <div class="row d-flex">
 
         <div class="row pt-md-4">
-            @foreach (var article in Model)
+            @foreach (var article in articles)
             {
-                Html.RenderPartial("_SingleArticlePartial", article);
+                Html.RenderPartial("", article);
             }
         </div><!-- END-->
         <div class="row">

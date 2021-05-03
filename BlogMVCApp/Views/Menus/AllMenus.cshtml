@@ -1,7 +1,7 @@
 ﻿@model List<BlogMVCApp.Models.Menu>
 <nav id="colorlib-main-menu" role="navigation">
     <ul>
-        @Html.ActionLink("Home", "Index", "Home")
+        <li class="colorlib-active">@Html.ActionLink("Home", "Index", "Home")</li> 
 
         @foreach (var menu in Model)
         {

@@ -22,8 +22,8 @@
                     Id = 1,
                     IsActive = true,
                     Name = "Travel",
-                    ControllerName = "Home",
-                    ActionName = "Travel",
+                    ControllerName = "Travel",
+                    ActionName = "Index",
                     Order = 1
                 },
                 new Models.Menu
@@ -31,8 +31,8 @@
                                     Id = 2,
                                     IsActive = true,
                                     Name = "Fashion",
-                                    ControllerName = "Home",
-                                    ActionName = "Fashion",
+                                    ControllerName = "Fashion",
+                                    ActionName = "Index",
                                     Order = 2
                                 },
                 new Models.Menu
@@ -40,8 +40,8 @@
                                                     Id = 3,
                                                     IsActive = true,
                                                     Name = "About",
-                                                    ControllerName = "Home",
-                                                    ActionName = "About",
+                                                    ControllerName = "About",
+                                                    ActionName = "Index",
                                                     Order = 3
                                                 },
                 new Models.Menu
@@ -49,8 +49,8 @@
                     Id = 4,
                     IsActive = true,
                     Name = "Contact",
-                    ControllerName = "Home",
-                    ActionName = "Contact",
+                    ControllerName = "Contact",
+                    ActionName = "Index",
                     Order = 3
                 }
 

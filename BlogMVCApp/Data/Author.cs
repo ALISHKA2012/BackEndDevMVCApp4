@@ -13,6 +13,8 @@ namespace BlogMVCApp.Models
         [Required]
         public int UserId { get; set; }
         public ICollection<Article> Articles { get; set; }
+        public string ProfilePicture { get; set; }
+        public string Description { get; set; }
         public Author()
         {
             Articles = new HashSet<Article>();
