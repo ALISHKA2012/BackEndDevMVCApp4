@@ -20,7 +20,7 @@ namespace BlogMVCApp.Controllers
         public ActionResult Index(int page = 1)
         {
 
-            return View();
+            return View(_blogDbContext.GetPaginatableTravelArticleData(page, _itemsPerPage));
         }
     }
 }

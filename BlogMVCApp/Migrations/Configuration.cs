@@ -52,11 +52,7 @@
                     ControllerName = "Contact",
                     ActionName = "Index",
                     Order = 3
-                }
-
-                
-                
-           );
+                });
 
             string email = ConfigurationManager.AppSettings["email"];
             string password = ConfigurationManager.AppSettings["email"];
@@ -74,7 +70,9 @@
             context.Authors.AddOrUpdate(new Author
             {
                UserId = 1,
-                Id = 1
+                Id = 1,
+                ProfilePicture = "person_1.jpg",
+                Description = "A small river named Duden flows by their place and supplies it with the necessary regelialia."
             });
             context.Articles.AddOrUpdate(new Article
             {

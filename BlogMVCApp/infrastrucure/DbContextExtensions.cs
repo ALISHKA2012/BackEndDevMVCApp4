@@ -63,6 +63,23 @@ namespace BlogMVCApp.infrastrucure
            }).ToList();
         }
 
+        public static IEnumerable<ArticleTravelModel> GetPaginatableTravelArticleData(this BlogDbContext _blogDbContext, int page, int _itemsPerPage)
+        {
+            return _blogDbContext.Articles.OrderByDescending(art => art.WrittenDate).Skip((page - 1) * _itemsPerPage).Take(_itemsPerPage)
+
+            .Select(x => new ArticleTravelModel
+            {
+                Id = x.Id,
+                ImagePath = x.ImagePath,
+                ShortDescription = x.ShortDescription,
+                WrittenDate = x.PublishDate,
+                Title = x.Title,
+                CommentsCount = x.Comments.Count,
+                AuthorName = x.Author.User.UserName,
+                ViewCount = x.ViewCount,
+                AuthorImage = x.Author.ProfilePicture
+            }).ToList();
+        }
 
     }
 }

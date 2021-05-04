@@ -1,7 +1,7 @@
-﻿@model IEnumerable<BlogMVCApp.Models.ArticleIndexModel>
+﻿@model IEnumerable<BlogMVCApp.Models.ArticleTravelModel> 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    articles = Model;
+    var articles = Model;
 }
 
 
@@ -12,7 +12,7 @@
         <div class="row pt-md-4">
             @foreach (var article in articles)
             {
-                Html.RenderPartial("", article);
+                Html.RenderPartial("_SingleArticleTravePartial", article);
             }
         </div><!-- END-->
         <div class="row">

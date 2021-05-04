@@ -230,6 +230,7 @@
     <Content Include="Views\Shared\_SideBarSearchTop.cshtml" />
     <Content Include="Views\Fashion\Index.cshtml" />
     <Content Include="Views\Travel\Index.cshtml" />
+    <Content Include="Views\Shared\_SingleArticleTravePartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
