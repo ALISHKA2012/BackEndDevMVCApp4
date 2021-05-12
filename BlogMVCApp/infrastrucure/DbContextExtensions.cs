@@ -26,7 +26,7 @@ namespace BlogMVCApp.infrastrucure
                 PublishDate = x.PublishDate,
                 Title = x.Title,
                 CommentsCount = x.Comments.Count,
-                AuthorName = x.Author.User.UserName,
+                AuthorName =  x.Author.Name + " " + x.Author.Surname,
                 ViewCount = x.ViewCount
             }).ToList();
         }
@@ -59,7 +59,7 @@ namespace BlogMVCApp.infrastrucure
                PublishDate = x.PublishDate,
                Title = x.Title,
                CommentsCount = x.Comments.Count,
-               AuthorName = x.Author.User.UserName,
+               AuthorName = x.Author.Name + " " + x.Author.Surname,
            }).ToList();
         }
 
@@ -75,7 +75,7 @@ namespace BlogMVCApp.infrastrucure
                 WrittenDate = x.PublishDate,
                 Title = x.Title,
                 CommentsCount = x.Comments.Count,
-                AuthorName = x.Author.User.UserName,
+                AuthorName = x.Author.Name + " " + x.Author.Surname,
                 ViewCount = x.ViewCount,
                 AuthorImage = x.Author.ProfilePicture
             }).ToList();

@@ -14,7 +14,7 @@ namespace BlogMVCApp.Models
         public string Name { get; set; }
         [Required]
         public bool IsActive { get; set; }
-        public ICollection<Article> Articles { get; set; }
+        public virtual ICollection<Article> Articles { get; set; }
         [Required]
         public string ControllerName { get; set; }
         [Required]

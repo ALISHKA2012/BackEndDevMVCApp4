@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<BlogMVCApp.Models.TagModel>
 <h3 class="sidebar-heading">Tag Cloud</h3>
 <ul class="tagcloud">
-    @foreach (var tag in Model)
+    @foreach (var tag in Model.ToList())
     {
         <a href="#" class="tag-cloud-link">@tag.Name</a>
 
