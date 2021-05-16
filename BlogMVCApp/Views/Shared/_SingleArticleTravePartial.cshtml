@@ -1,31 +1,33 @@
 ﻿@model BlogMVCApp.Models.ArticleTravelModel
 @{ 
-    var articles = Model;
+    var article = Model;
 }
 
 <div class="col-md-12">
     <div class="blog-entry-2 ftco-animate">
-        <a href="single.html" class="img" style="background-image: url(/Content/images/@articles.ImagePath);"></a>
+        <a href="#" class="img" style="background-image: url(/Content/images/@article.ImagePath);"></a>
         <div class="text pt-4">
-            <h3 class="mb-4"><a href="#">@articles.Title</a></h3>
-            <p class="mb-4">@articles.ShortDescription</p>
+            <h3 class="mb-4">@Html.ActionLink(article.Title, "Details", "Articles", routeValues: new { id = article.Id }, htmlAttributes: new { @class = "article-title" })</h3>
+            <p class="mb-4">@article.ShortDescription</p>
             <div class="author mb-4 d-flex align-items-center">
-                <a href="#" class="img" style="background-image: url(/Content/images/@articles.AuthorImage);"></a>
+                <a href="#" class="img" style="background-image: url(/Content/images/@article.AuthorImage);"></a>
                 <div class="ml-3 info">
                     <span>Written by</span>
-                    <h3><a href="#">@articles.AuthorName</a>, <span>@articles.WrittenDate</span></h3>
+                    <h3><a href="#">@article.AuthorName</a>, <span>@article.WrittenDate</span></h3>
                 </div>
             </div>
             <div class="meta-wrap d-md-flex align-items-center">
                 <div class="half order-md-last text-md-right">
                     <p class="meta">
                         <span><i class="icon-heart"></i>3</span>
-                        <span><i class="icon-eye"></i>@articles.ViewCount</span>
-                        <span><i class="icon-comment"></i>@articles.CommentsCount</span>
+                        <span><i class="icon-eye"></i>@article.ViewCount</span>
+                        <span><i class="icon-comment"></i>@article.CommentsCount</span>
                     </p>
                 </div>
                 <div class="half">
-                    <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Continue Reading</a></p>
+                    <p>
+                        @Html.ActionLink("Continue Reading", "Details", "Articles", routeValues: new { id = article.Id }, htmlAttributes: new { @class = "btn btn-primary p-3 px-xl-4 py-xl-3" })
+                    </p>
                 </div>
             </div>
         </div>

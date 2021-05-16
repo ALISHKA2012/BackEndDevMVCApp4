@@ -2,16 +2,18 @@
 using BlogMVCApp.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 
 namespace BlogMVCApp.infrastrucure
 {
     public static class DbContextExtensions
     {
-        public static IEnumerable<ArticleIndexModel> GetPaginatableArticleData(this BlogDbContext _blogDbContext, int page, int _itemsPerPage)
+        public static async Task<IEnumerable<ArticleIndexModel>> GetPaginatableArticleDataAsync(this BlogDbContext _blogDbContext, int page, int _itemsPerPage)
         {
-            return _blogDbContext.Articles.OrderByDescending(art => art.PublishDate).Skip((page - 1) * _itemsPerPage).Take(_itemsPerPage)
+            return await _blogDbContext.Articles.OrderByDescending(art => art.PublishDate).Skip((page - 1) * _itemsPerPage).Take(_itemsPerPage)
 
             .Select(x => new ArticleIndexModel
             {
@@ -28,7 +30,7 @@ namespace BlogMVCApp.infrastrucure
                 CommentsCount = x.Comments.Count,
                 AuthorName =  x.Author.Name + " " + x.Author.Surname,
                 ViewCount = x.ViewCount
-            }).ToList();
+            }).ToListAsync();
         }
 
         public static IEnumerable<CategoryModel> GetCategoriesData(this BlogDbContext _blogDbContext)
@@ -63,9 +65,9 @@ namespace BlogMVCApp.infrastrucure
            }).ToList();
         }
 
-        public static IEnumerable<ArticleTravelModel> GetPaginatableTravelArticleData(this BlogDbContext _blogDbContext, int page, int _itemsPerPage)
+        public static async Task<IEnumerable<ArticleTravelModel>> GetPaginatableTravelArticleDataAsync(this BlogDbContext _blogDbContext, int page, int _itemsPerPage)
         {
-            return _blogDbContext.Articles.OrderByDescending(art => art.WrittenDate).Skip((page - 1) * _itemsPerPage).Take(_itemsPerPage)
+            return await _blogDbContext.Articles.OrderByDescending(art => art.WrittenDate).Skip((page - 1) * _itemsPerPage).Take(_itemsPerPage)
 
             .Select(x => new ArticleTravelModel
             {
@@ -78,7 +80,7 @@ namespace BlogMVCApp.infrastrucure
                 AuthorName = x.Author.Name + " " + x.Author.Surname,
                 ViewCount = x.ViewCount,
                 AuthorImage = x.Author.ProfilePicture
-            }).ToList();
+            }).ToListAsync();
         }
 
     }
