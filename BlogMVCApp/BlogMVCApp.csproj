@@ -185,6 +185,10 @@
     <Compile Include="Migrations\202105120748454_DbUpdated.Designer.cs">
       <DependentUpon>202105120748454_DbUpdated.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105181741283_Comment_User_updated.cs" />
+    <Compile Include="Migrations\202105181741283_Comment_User_updated.Designer.cs">
+      <DependentUpon>202105181741283_Comment_User_updated.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Data\Article.cs" />
     <Compile Include="Models\ArticleDetailsModel.cs" />
@@ -198,6 +202,7 @@
     <Compile Include="Data\Comment.cs" />
     <Compile Include="Data\Menu.cs" />
     <Compile Include="Data\Tag.cs" />
+    <Compile Include="Models\CommentModel.cs" />
     <Compile Include="Models\TagModel.cs" />
     <Compile Include="Data\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -243,6 +248,7 @@
     <Content Include="Views\Shared\_SingleArticleTravePartial.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\Articles\Details.cshtml" />
+    <Content Include="Views\Shared\_CommentPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -266,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105120748454_DbUpdated.resx">
       <DependentUpon>202105120748454_DbUpdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105181741283_Comment_User_updated.resx">
+      <DependentUpon>202105181741283_Comment_User_updated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

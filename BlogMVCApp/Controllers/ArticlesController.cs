@@ -43,6 +43,10 @@ namespace BlogMVCApp.Controllers
                     Id = t.Id,
                     Name = t.Name
                 }).ToList(),
+                Comments = articles.Comments.Select(t => new CommentModel
+                {
+
+                }).ToList()
             };
 
             if (articles == null)

@@ -10,8 +10,13 @@ namespace BlogMVCApp.Models
     {
         public int Id { get; set; }
         [Required]
-        [StringLength(maximumLength: 100, MinimumLength = 1)]
+        [MaxLength(1000)]
         public string Text { get; set; }
+        [Required]
+        [EmailAddress]
+        [MaxLength(50)]
+        public string Email { get; set; }
+        public string WebSite { get; set; }
         public User User { get; set; }
         public int UserId { get; set; }
         public virtual Article Article { get; set; }

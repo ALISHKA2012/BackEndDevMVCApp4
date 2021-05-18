@@ -15,6 +15,8 @@ namespace BlogMVCApp.Models
         [Required]
         [StringLength(maximumLength: 30, MinimumLength = 8)]
         public string Password { get; set; }
+        [Required]
+        public string ProfilePicture { get; set; }
         public bool IsActive { get; set; }
         [Required]
         [EmailAddress]

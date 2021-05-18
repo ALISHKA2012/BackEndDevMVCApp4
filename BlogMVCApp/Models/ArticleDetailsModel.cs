@@ -14,5 +14,6 @@ namespace BlogMVCApp.Models
         public string Description { get; set; }
         public AuthorModel Author { get; set; }
         public List<TagModel>  Tags { get; set; }
+        public List<CommentModel> Comments { get; internal set; }
     }
 }
