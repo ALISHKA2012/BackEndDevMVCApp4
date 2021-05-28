@@ -43,9 +43,17 @@ namespace BlogMVCApp.Controllers
                     Id = t.Id,
                     Name = t.Name
                 }).ToList(),
-                Comments = articles.Comments.Select(t => new CommentModel
+                Comments = articles.Comments.Select(c => new CommentModel
                 {
-
+                    Id = c.Id,
+                    CommentDate = c.CommentDate,
+                    Text = c.Text,
+                    Email = c.Email,
+                    WebSite = c.WebSite,
+                    Article = c.Article,
+                    ArticleId = c.ArticleId,
+                    
+                   
                 }).ToList()
             };
 

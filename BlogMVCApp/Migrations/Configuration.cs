@@ -65,7 +65,8 @@
                 IsAuthor = true,
                 Email = email,
                 Password = password,
-                UserName = username
+                UserName = username,
+                ProfilePicture = "person_1.jpg"
             });
             context.Authors.AddOrUpdate(new Author
             {

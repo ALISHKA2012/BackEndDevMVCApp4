@@ -160,6 +160,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ArticlesController.cs" />
+    <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\FashionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenusController.cs" />
@@ -188,6 +189,30 @@
     <Compile Include="Migrations\202105181741283_Comment_User_updated.cs" />
     <Compile Include="Migrations\202105181741283_Comment_User_updated.Designer.cs">
       <DependentUpon>202105181741283_Comment_User_updated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105181834382_Comment_DateAdded.cs" />
+    <Compile Include="Migrations\202105181834382_Comment_DateAdded.Designer.cs">
+      <DependentUpon>202105181834382_Comment_DateAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105181850082_CommentDateDeleted.cs" />
+    <Compile Include="Migrations\202105181850082_CommentDateDeleted.Designer.cs">
+      <DependentUpon>202105181850082_CommentDateDeleted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105181854335_CommentDateColumnAdded.cs" />
+    <Compile Include="Migrations\202105181854335_CommentDateColumnAdded.Designer.cs">
+      <DependentUpon>202105181854335_CommentDateColumnAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105191555043_migration.cs" />
+    <Compile Include="Migrations\202105191555043_migration.Designer.cs">
+      <DependentUpon>202105191555043_migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105201612008_CommentUpdated_UserImage_ArticleId.cs" />
+    <Compile Include="Migrations\202105201612008_CommentUpdated_UserImage_ArticleId.Designer.cs">
+      <DependentUpon>202105201612008_CommentUpdated_UserImage_ArticleId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105282029478_Comment_UserRemoved.cs" />
+    <Compile Include="Migrations\202105282029478_Comment_UserRemoved.Designer.cs">
+      <DependentUpon>202105282029478_Comment_UserRemoved.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Data\Article.cs" />
@@ -249,6 +274,7 @@
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\Articles\Details.cshtml" />
     <Content Include="Views\Shared\_CommentPartial.cshtml" />
+    <Content Include="Views\Shared\_CommentsFormPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -258,7 +284,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202104261648333_initial.resx">
@@ -275,6 +300,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105181741283_Comment_User_updated.resx">
       <DependentUpon>202105181741283_Comment_User_updated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105181834382_Comment_DateAdded.resx">
+      <DependentUpon>202105181834382_Comment_DateAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105181850082_CommentDateDeleted.resx">
+      <DependentUpon>202105181850082_CommentDateDeleted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105181854335_CommentDateColumnAdded.resx">
+      <DependentUpon>202105181854335_CommentDateColumnAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105191555043_migration.resx">
+      <DependentUpon>202105191555043_migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105201612008_CommentUpdated_UserImage_ArticleId.resx">
+      <DependentUpon>202105201612008_CommentUpdated_UserImage_ArticleId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105282029478_Comment_UserRemoved.resx">
+      <DependentUpon>202105282029478_Comment_UserRemoved.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
