@@ -113,6 +113,7 @@
     <Content Include="Content\images\about.jpg" />
     <Content Include="Content\images\author.jpg" />
     <Content Include="Content\images\bg_1.jpg" />
+    <Content Include="Content\images\default_pic.jpg" />
     <Content Include="Content\images\image_1.jpg" />
     <Content Include="Content\images\image_10.jpg" />
     <Content Include="Content\images\image_11.jpg" />
@@ -159,8 +160,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\ArticlesController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\FashionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenusController.cs" />
@@ -213,6 +216,10 @@
     <Compile Include="Migrations\202105282029478_Comment_UserRemoved.cs" />
     <Compile Include="Migrations\202105282029478_Comment_UserRemoved.Designer.cs">
       <DependentUpon>202105282029478_Comment_UserRemoved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105290845299_Default_UserImage.cs" />
+    <Compile Include="Migrations\202105290845299_Default_UserImage.Designer.cs">
+      <DependentUpon>202105290845299_Default_UserImage.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Data\Article.cs" />
@@ -275,6 +282,8 @@
     <Content Include="Views\Articles\Details.cshtml" />
     <Content Include="Views\Shared\_CommentPartial.cshtml" />
     <Content Include="Views\Shared\_CommentsFormPartial.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -318,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105282029478_Comment_UserRemoved.resx">
       <DependentUpon>202105282029478_Comment_UserRemoved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105290845299_Default_UserImage.resx">
+      <DependentUpon>202105290845299_Default_UserImage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

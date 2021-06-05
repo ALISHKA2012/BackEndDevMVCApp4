@@ -34,6 +34,7 @@ namespace BlogMVCApp.Controllers
                     Text = comment.Text,
                     WebSite = comment.WebSite,
                     CommentDate = comment.CommentDate,
+                    UserImage = string.IsNullOrEmpty(comment.UserImage) ? "default_pic.jpg" : comment.UserImage
                 };
                 _blogDbContext.Comments.Add(c);
                 await _blogDbContext.SaveChangesAsync();

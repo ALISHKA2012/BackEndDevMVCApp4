@@ -52,8 +52,8 @@ namespace BlogMVCApp.Controllers
                     WebSite = c.WebSite,
                     Article = c.Article,
                     ArticleId = c.ArticleId,
-                    
-                   
+                    Name = c.Name,
+                    UserImage = c.UserImage
                 }).ToList()
             };
 
