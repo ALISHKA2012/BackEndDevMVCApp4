@@ -4,6 +4,11 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
+<style>
+    .field-validation-error, .validation-summary{
+        color: #ff0000;
+    }
+</style>
 <script src="https://kit.fontawesome.com/8d65552767.js" crossorigin="anonymous"></script>
 <h2>Login Page  <i class="fas fa-sign-in-alt"></i></h2>
 <div class="col-lg-6 d-flex">
@@ -17,12 +22,18 @@
         </div>
         <div class="form-group">
             @Html.DisplayNameFor(x => x.Password)
-            @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
-            @Html.ValidationMessageFor(x => x.Email)
+            @Html.PasswordFor(x => x.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Password)
         </div>
         <div class="form-group">
             <input type="submit" value="Login" class="btn btn-primary py-3 px-5">
         </div>
-        @Html.ValidationSummary();
     }
 </div>
+<section>
+    @Html.ValidationSummary("")
+</section>
+@section ValidationSection{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+}

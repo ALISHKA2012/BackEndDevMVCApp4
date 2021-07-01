@@ -176,6 +176,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="infrastrucure\DbContextExtensions.cs" />
+    <Compile Include="infrastrucure\DbSetExtensions.cs" />
     <Compile Include="Migrations\202104261648333_initial.cs" />
     <Compile Include="Migrations\202104261648333_initial.designer.cs">
       <DependentUpon>202104261648333_initial.cs</DependentUpon>
@@ -266,7 +267,8 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\Account\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_Validation.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\Succsess.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\Error.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
