@@ -266,13 +266,12 @@
     <Content Include="Fonts\open-iconic\open-iconic.woff" />
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Admin\Views\Account\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\Login.cshtml" />
     <Content Include="Areas\Admin\Views\Account\Succsess.cshtml" />
     <Content Include="Areas\Admin\Views\Account\Error.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Travel.cshtml" />
     <Content Include="Views\Menus\AllMenus.cshtml" />
     <Content Include="Views\Shared\_NewsLetterPartial.cshtml" />
     <Content Include="Views\Shared\_FooterPartial.cshtml" />

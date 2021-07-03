@@ -21,8 +21,9 @@ namespace BlogMVCApp.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult Login()
         {
+            ViewBag.Title = "LoginPage";
             return View();
         }
         [HttpPost]
