@@ -5,8 +5,12 @@
 }
 
 <style>
-    .field-validation-error, .validation-summary{
+    .field-validation-error, .validation-summary, .validation-summary-errors{
         color: #ff0000;
+    }
+    .validation-summary-errors ul{
+        padding: 0;
+        list-style-type: none;
     }
 </style>
 <script src="https://kit.fontawesome.com/8d65552767.js" crossorigin="anonymous"></script>
@@ -28,11 +32,9 @@
         <div class="form-group">
             <input type="submit" value="Login" class="btn btn-primary py-3 px-5">
         </div>
+        @Html.ValidationSummary();
     }
 </div>
-<section>
-    @Html.ValidationSummary("")
-</section>
 @section ValidationSection{
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>

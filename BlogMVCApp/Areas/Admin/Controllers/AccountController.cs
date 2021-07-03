@@ -34,11 +34,16 @@ namespace BlogMVCApp.Areas.Admin.Controllers
                 User user = await _blogDbContext.Users.GetUserAsync(model);
                 if (user == null)
                 {
-                    ModelState.AddModelError("", "Given email or password is wrong!");
-                    return RedirectToAction(nameof(Index));
+                    ModelState.AddModelError("", "This user does not exist!");
+                    return View();
                 }
                 else
                     Session.Add("UserInfo", user.Email);
+                    Response.Cookies.Add(new HttpCookie("myCookie")
+                    {
+                        Expires = DateTime.Now.AddDays(7),
+                        Value = "this is my cookie"
+                    });
                     return RedirectToAction(nameof(Succsess));    
             }
             return RedirectToAction(nameof(Error));
@@ -50,7 +55,7 @@ namespace BlogMVCApp.Areas.Admin.Controllers
         public ActionResult Succsess()
         {
             if (Session["userInfo"] == null)
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Login));
             else
                 return View();
         }
